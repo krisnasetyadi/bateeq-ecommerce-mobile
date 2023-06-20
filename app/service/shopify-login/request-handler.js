@@ -1,8 +1,9 @@
-import {create} from 'apisauce';
+import { create } from 'apisauce';
 import LocalStorage from 'local-storage';
+import { BASER_ADMIN_URL } from '@env';
 
 const api = create({
-  baseURL: `https://bateeqshop.myshopify.com/admin/api/2023-04/`,
+  baseURL: `${BASER_ADMIN_URL}`,
   headers: {
     'Content-Type': 'application/json',
     'X-Shopify-Access-Token': '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',
@@ -39,8 +40,7 @@ export default class RequestHandler {
 
     if (response.data) {
       if (typeof response.data === 'object') {
-        msg =
-          response.data.Error || response.data.error || 'An error has occurred';
+        msg = response.data.Error || response.data.error || 'An error has occurred';
       } else {
         msg = response.data || 'An error has occurred';
       }
@@ -58,23 +58,7 @@ export default class RequestHandler {
   get(params, url = this.url) {
     return new Promise((resolve, reject) => {
       api
-        .get(`${url}.json`, {...params})
-        .then(response => {
-          if (response.ok) resolve(response.data);
-          else {
-            reject(response);
-          }
-        })
-        .catch(error => {
-          reject(error);
-        });
-    });
-  }
-
-  getDataAccount(customerId, params, url = this.url) {
-    return new Promise((resolve, reject) => {
-      api
-        .get(`${url}/${customerId}.json`, {...params})
+        .get(`${url}.json`, { ...params })
         .then(response => {
           if (response.ok) resolve(response.data);
           else {

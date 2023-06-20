@@ -11,13 +11,13 @@ import {
 import { Formik } from 'formik';
 import Toast from 'react-native-toast-message';
 // import CheckBox from '@react-native-community/checkbox';
+import * as Yup from 'yup';
 import HeaderBateeq from '../../components/HeaderBateeq';
 import CustomButton from '../../components/CustomButton';
 import { GlobalStyleSheet } from '../../constants/StyleSheet';
 import { COLORS, FONTS } from '../../constants/theme';
 import { AuthenApi } from '../../service/shopify-login';
 import LoadingScreen from '../../components/LoadingView';
-import * as Yup from 'yup';
 
 function SignUp(props) {
   const [isFocused, setisFocused] = useState(false);
@@ -198,7 +198,8 @@ function SignUp(props) {
             Register
           </Text>
           <Text style={{ ...FONTS.fontSatoshiRegular }}>
-            Register your bateeq account to enjoy benefits from our membership.{' '}
+            Register your bateeq account to enjoy benefits from our membership.
+{' '}
           </Text>
         </View>
 

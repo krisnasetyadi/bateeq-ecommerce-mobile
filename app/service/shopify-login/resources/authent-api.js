@@ -5,7 +5,6 @@ class AuthenApi extends RequestHandler {
   constructor() {
     super(ENDPOINT.AUTHEN);
   }
-  
 }
 
 export default new AuthenApi();

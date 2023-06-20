@@ -5,7 +5,6 @@ class AccessApi extends RequestHandler {
   constructor() {
     super(ENDPOINT.TOKEN);
   }
-  
 }
 
 export default new AccessApi();
