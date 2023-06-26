@@ -24,13 +24,12 @@ function CustomDrawer({ navigation, customerInfo, options, ...props }) {
       name: 'Home',
       navigate: 'Home',
       onPress: async () => {
-        navigation.dispatch(
+        await navigation.dispatch(
           CommonActions.reset({
             index: 0,
             routes: [{ name: 'Home' }],
           })
         );
-        navigation.closeDrawer();
       },
     },
     // {
@@ -140,9 +139,9 @@ function CustomDrawer({ navigation, customerInfo, options, ...props }) {
               onPress={
                 data?.onPress
                   ? data?.onPress
-                  : async () => {
+                  : () => {
                       if (
-                        // data.navigate == 'Home' ||
+                        // data.navigate === 'Home' ||
                         // data.navigate == 'Cart' ||
                         data.navigate === 'Account' ||
                         // data.navigate === 'Favourite' ||
@@ -152,9 +151,6 @@ function CustomDrawer({ navigation, customerInfo, options, ...props }) {
                           screen: data.navigate,
                         });
                       }
-                      // else {
-                      //   navigation.navigate(data.navigate);
-                      // }
 
                       navigation.closeDrawer();
                     }

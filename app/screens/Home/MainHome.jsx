@@ -86,6 +86,8 @@ function MainHome(props) {
     }
   }, [cartData]);
 
+  console.log('pages', [pageStory]);
+
   return (
     <SafeAreaView
       style={{

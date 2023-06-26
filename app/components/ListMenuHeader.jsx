@@ -135,7 +135,7 @@ function MenuItem({ item, onCloseSubMenu, isSubMenuOpen, setSubMenuOpen, dataSto
   );
 }
 
-function MenuListHeader({ dataListMenu, dataStory }) {
+function MenuListHeader({ dataListMenu, dataPageStory }) {
   const [subMenuOpenStates, setSubMenuOpenStates] = useState({});
 
   const toggleSubMenu = (itemId, value) => {
@@ -158,7 +158,7 @@ function MenuListHeader({ dataListMenu, dataStory }) {
           onCloseSubMenu={closeSubMenu}
           isSubMenuOpen={subMenuOpenStates[item.id] || false}
           setSubMenuOpen={value => toggleSubMenu(item.id, value)}
-          dataStory={dataStory}
+          dataStory={dataPageStory}
         />
       ))}
     </ScrollView>

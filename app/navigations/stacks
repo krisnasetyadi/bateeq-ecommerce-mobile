@@ -73,6 +73,7 @@ function StackNavigator({ isAuthenticated }) {
           }}
         >
           {/* <StackComponent.Screen name="Splash" component={Splash} /> */}
+          <StackComponent.Screen name="Home" component={MainHome} />
           <StackComponent.Screen name="DrawerNavigation" component={DrawerNavigation} />
           <StackComponent.Screen name="Products" component={Products} />
           <StackComponent.Screen name="OrderDetail" component={OrderDetail} />
@@ -121,7 +122,7 @@ function StackNavigator({ isAuthenticated }) {
         <StackComponent.Screen name="Featured" component={Featured} />
         <StackComponent.Screen name="Orders" component={Orders} />
         {/* <StackComponent.Screen name="DeliveryTracking" component={DeliveryTracking} /> */}
-        <StackComponent.Screen name="Wishlist" component={Wishlist} />
+        // <StackComponent.Screen name="Wishlist" component={Wishlist} />
         <StackComponent.Screen name="Profile" component={Profile} />
         <StackComponent.Screen name="Address" component={Address} />
         <StackComponent.Screen name="EditProfile" component={EditProfile} />

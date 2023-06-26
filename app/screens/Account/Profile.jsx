@@ -7,44 +7,44 @@ import RBSheet from 'react-native-raw-bottom-sheet';
 import { connect } from 'react-redux';
 import { GlobalStyleSheet } from '../../constants/StyleSheet';
 import { COLORS, FONTS } from '../../constants/theme';
-import india from '../../assets/images/flags/india.png';
-import UnitedStates from '../../assets/images/flags/UnitedStates.png';
-import german from '../../assets/images/flags/german.png';
-import italian from '../../assets/images/flags/italian.png';
-import spanish from '../../assets/images/flags/spanish.png';
+// import india from '../../assets/images/flags/india.png';
+// import UnitedStates from '../../assets/images/flags/UnitedStates.png';
+// import german from '../../assets/images/flags/german.png';
+// import italian from '../../assets/images/flags/italian.png';
+// import spanish from '../../assets/images/flags/spanish.png';
 import CustomButton from '../../components/CustomButton';
 import LoadingScreen from '../../components/LoadingView';
 import HeaderComponent from '../../components/HeaderComponent';
 import UserInfo from '../../components/UserInfo';
 import { getAddressList } from '../../store/actions/address';
 
-const languagetData = [
-  {
-    flag: india,
-    name: 'Indian',
-  },
-  {
-    flag: UnitedStates,
-    name: 'English',
-  },
-  {
-    flag: german,
-    name: 'German',
-  },
-  {
-    flag: italian,
-    name: 'Italian',
-  },
-  {
-    flag: spanish,
-    name: 'Spanish',
-  },
-];
+// const languagetData = [
+//   {
+//     flag: india,
+//     name: 'Indian',
+//   },
+//   {
+//     flag: UnitedStates,
+//     name: 'English',
+//   },
+//   {
+//     flag: german,
+//     name: 'German',
+//   },
+//   {
+//     flag: italian,
+//     name: 'Italian',
+//   },
+//   {
+//     flag: spanish,
+//     name: 'Spanish',
+//   },
+// ];
 function Profile({ token, getAddressList: getAddress }) {
   const navigation = useNavigation();
   const [isLoggedOut, setIsLoggedOut] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const RBSheetLanguage = useRef();
+  // const RBSheetLanguage = useRef();
   const isFocused = useIsFocused();
 
   useEffect(() => {
@@ -60,7 +60,7 @@ function Profile({ token, getAddressList: getAddress }) {
 
   return (
     <>
-      <RBSheet
+      {/* <RBSheet
         ref={RBSheetLanguage}
         closeOnDragDown
         height={400}
@@ -113,7 +113,7 @@ function Profile({ token, getAddressList: getAddress }) {
             </TouchableOpacity>
           ))}
         </ScrollView>
-      </RBSheet>
+      </RBSheet> */}
 
       <SafeAreaView
         style={{
@@ -121,7 +121,7 @@ function Profile({ token, getAddressList: getAddress }) {
           backgroundColor: COLORS.backgroundColor,
         }}
       >
-        {/* <HeaderComponent /> */}
+        <HeaderComponent />
         <ScrollView>
           <Text
             style={{
