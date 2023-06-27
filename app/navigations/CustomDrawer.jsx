@@ -23,11 +23,11 @@ function CustomDrawer({ navigation, customerInfo, options, ...props }) {
       icon: 'home',
       name: 'Home',
       navigate: 'Home',
-      onPress: async () => {
-        await navigation.dispatch(
+      onPress: () => {
+        navigation.dispatch(
           CommonActions.reset({
             index: 0,
-            routes: [{ name: 'Home' }],
+            routes: [{ name: 'DrawerNavigation' }],
           })
         );
       },
